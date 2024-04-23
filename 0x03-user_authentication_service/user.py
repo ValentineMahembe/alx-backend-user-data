@@ -35,10 +35,10 @@ class User(Base):
         """
         Return a string representation of the User instance
         """
-        return " < User(id={}, email='{}', session_id='{}',
-                        reset_token='{}') > ".format(
-                self.id, self.email, self.session_id, self.reset_token
-                )
+        return ("<User(id={}, email='{}', session_id='{}', "
+                "reset_token='{}')>").format(
+                         self.id, self.email, self.session_id, self.reset_token
+                         )
 
     def to_dict(self) -> dict:
         """
