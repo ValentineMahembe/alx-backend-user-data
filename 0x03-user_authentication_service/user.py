@@ -22,7 +22,7 @@ class User(Base):
     reset_token = Column(String(250), nullable=True)
 
     def __init__(self, email: str, hashed_password: str,
-            session_id: str = None, reset_token: str = None):
+                 session_id: str = None, reset_token: str = None):
         """
         Inititalise a new User instance
         """
@@ -35,7 +35,8 @@ class User(Base):
         """
         Return a string representation of the User instance
         """
-        return "<User(id={}, email='{}', session_id='{}', reset_token='{}')>".format(
+        return " < User(id={}, email='{}', session_id='{}',
+                        reset_token='{}') > ".format(
                 self.id, self.email, self.session_id, self.reset_token
                 )
 
